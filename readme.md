@@ -1,2 +1,8 @@
-# next steps:
-- figure out how to reference service endpoint inside nginx config (ip address unavailable unless I manually configure the network, which would be fine)
+# next steps *adding these as github work items*
+
+## helpful links
+- [nextcloud docs - nginx config](https://docs.nextcloud.com/server/latest/admin_manual/installation/nginx.html)
+- [nextcloud - dockerhub](https://hub.docker.com/_/nextcloud)
+- [nginx - dockerhub](https://hub.docker.com/_/nginx)
+- [nginx docs - beginner](https://nginx.org/en/docs/beginners_guide.html)
+- [nginx fastcgi docs](http://nginx.org/en/docs/http/ngx_http_fastcgi_module.html)
