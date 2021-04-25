@@ -33,7 +33,7 @@ services:
     restart: always
     command: --transaction-isolation=READ-COMMITTED --binlog-format=ROW
     volumes:
-      - /tmp/nextcloud.sql:/docker-entrypoint-initdb.d/nextcloud.sql
+      - ./mysql/nextcloud.sql:/docker-entrypoint-initdb.d/nextcloud.sql
       - db:/var/lib/mysql
     networks:
       - backend
@@ -42,6 +42,8 @@ services:
       - MYSQL_DATABASE=nextcloud
       - MYSQL_USER=nextcloud
       - MYSQL_PASSWORD=16d55469ac05472c96220105b6e4976f
+    cap_add:
+      - SYS_NICE
 
   app:
     image: nextcloud:19.0.10-fpm
