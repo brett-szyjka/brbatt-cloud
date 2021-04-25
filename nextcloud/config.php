@@ -22,6 +22,7 @@ $CONFIG = array (
   'trusted_domains' =>
   array (
     0 => 'cl.njbs.dev',
+    1 => 'cloud.szyjka.net'
   ),
   'datadirectory' => '/var/www/html/data',
   'encryption_skip_signature_check' => true,
