@@ -52,7 +52,6 @@ services:
     volumes:
       - nextcloud-data:/var/www/html/
       - certs:/certs
-      - ./nextcloud/config.php:/var/www/html/config/config.php
     networks:
       frontend:
       backend:
