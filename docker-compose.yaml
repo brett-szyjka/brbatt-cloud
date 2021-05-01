@@ -1,5 +1,5 @@
+---
 version: "3"
-  
 networks:
   frontend:
     name: ngx-fe
@@ -52,7 +52,6 @@ services:
     restart: always
     volumes:
       - nextcloud-data:/var/www/html/
-      - ./nextcloud/config.php:/var/www/html/config/config.php
       - certs:/certs
     networks:
       frontend:
