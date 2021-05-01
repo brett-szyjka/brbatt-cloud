@@ -29,14 +29,12 @@ services:
       - app
     volumes_from:
       - app
-    user: 1001:101
 
   db:
     image: mysql:8.0.23
     restart: always
     command: --transaction-isolation=READ-COMMITTED --binlog-format=ROW
     volumes:
-      - ./mysql/nextcloud.sql:/docker-entrypoint-initdb.d/nextcloud.sql
       - db:/var/lib/mysql
     networks:
       - backend
@@ -66,4 +64,3 @@ services:
       - MYSQL_HOST=db
     depends_on:
       - db
-    user: 1001:101
