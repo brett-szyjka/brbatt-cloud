@@ -47,10 +47,10 @@ services:
       - SYS_NICE
 
   app:
-    image: nextcloud:19.0.10-fpm
+    build: ./nextcloud
     restart: always
     volumes:
-      - nextcloud-data:/var/www/html/
+      - nextcloud-data:/data
       - certs:/certs
     networks:
       frontend:
