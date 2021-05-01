@@ -1,4 +1,15 @@
-# next steps *adding these as github work items*
+# Goals
+I want to deploy a reliable & fast nextcloud instance inside of the homelab. 
+
+
+
+
+
+
+
+
+
+
 
 ## helpful links
 - [nextcloud docs - nginx config](https://docs.nextcloud.com/server/latest/admin_manual/installation/nginx.html)

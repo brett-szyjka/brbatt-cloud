@@ -35,6 +35,7 @@ services:
     restart: always
     command: --transaction-isolation=READ-COMMITTED --binlog-format=ROW
     volumes:
+      - ./mysql/nextcloud.sql:/docker-entrypoint-initdb.d/nextcloud.sql
       - db:/var/lib/mysql
     networks:
       - backend
