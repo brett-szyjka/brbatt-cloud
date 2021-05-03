@@ -32,7 +32,6 @@ $CONFIG = array (
   'dbname' => 'nextcloud',
   'dbhost' => 'db',
   'dbport' => '',
-  'config_is_read_only' => true,
   'dbtableprefix' => 'oc_',
   'mysql.utf8mb4' => true,
   'dbuser' => 'nextcloud',

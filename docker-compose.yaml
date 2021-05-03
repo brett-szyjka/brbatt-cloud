@@ -12,6 +12,8 @@ volumes:
   nextcloud-data:
   db:
   certs:
+  themes:
+  config:
 
 services:
   lb:
@@ -19,6 +21,8 @@ services:
     restart: always
     volumes:
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+      - config:/var/www/html/config
+      - themes:/var/www/html/themes
     networks:
       frontend:
     ports:
@@ -26,8 +30,6 @@ services:
       - 443:443
     depends_on:
       - db
-      - app
-    volumes_from:
       - app
 
   db:
@@ -52,6 +54,8 @@ services:
     restart: always
     volumes:
       - nextcloud-data:/data
+      - config:/var/www/html/config
+      - themes:/var/www/html/themes
       - certs:/certs
     networks:
       frontend:
