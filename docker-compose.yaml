@@ -13,7 +13,7 @@ volumes:
   db:
   certs:
   themes:
-
+  config:
 
 services:
   lb:
