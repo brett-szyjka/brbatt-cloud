@@ -29,6 +29,7 @@ services:
       - app
     volumes_from:
       - app
+    user: 1033:133
 
   db:
     image: mysql:8.0.23
@@ -65,3 +66,4 @@ services:
       - MYSQL_HOST=db
     depends_on:
       - db
+    user: 1033:133
